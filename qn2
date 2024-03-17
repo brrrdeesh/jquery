@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Vowel Counter</h1>
+    <label for="inputText">Enter a string:</label>
+    <input type="text" id="inputText">
+    <button id="countVowels">Count Vowels</button>
+    <p id="result"></p>
+
+    <script>
+        $(document).ready(function() {
+            $("#countVowels").click(function() {
+                const inputText = $("#inputText").val();
+                const vowels = "aeiouAEIOU";
+                let vowelCount = 0;
+
+                for (let i = 0; i < inputText.length; i++) {
+                    if (vowels.includes(inputText[i])) {
+                        vowelCount++;
+                    }
+                }
+
+                $("#result").text("Number of vowels: " + vowelCount);
+            });
+        });
+    </script>
+</body>
+</html>
