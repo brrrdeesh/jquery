@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Button</title>
+</head>
+<body>
+    <h1 id="heading">Today is Sunday, March 17, 2024</h1>
+    <button id="button">Click me</button>
+
+    <script>
+        const heading = document.getElementById('heading');
+        const button = document.getElementById('button');
+
+        let isHelloWorld = false;
+
+        button.addEventListener('click', () => {
+            if (isHelloWorld) {
+                heading.textContent = 'Today is Sunday, March 17, 2024';
+            } else {
+                heading.textContent = 'Hello, World!';
+            }
+            isHelloWorld = !isHelloWorld;
+        });
+    </script>
+</body>
+</html>
